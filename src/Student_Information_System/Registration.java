@@ -121,7 +121,7 @@ public class Registration extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Registation");
+        jLabel1.setText("Registration");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -311,9 +311,9 @@ public class Registration extends javax.swing.JFrame {
                  Gender = "Female";
              }
              
-             String course = txtcourse.getSelectedItem().toString();
+             String coursename = txtcourse.getSelectedItem().toString();
              
-             String batch = txtbatch.getSelectedItem().toString();
+             String batchname = txtbatch.getSelectedItem().toString();
                  
              String telephone = txttel.getText();
              String address = txtaddress.getText();
@@ -323,15 +323,15 @@ public class Registration extends javax.swing.JFrame {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost/studentinformation","root","");
                 
-                pst = con.prepareStatement("insert into registration(firstname,lastname,nic,gender,course,batch,telephone,address)values(?,?,?,?,?,?,?,?)");
+                pst = con.prepareStatement("insert into registration(firstname,lastname,nic,gender,coursename,batchname,telephone,address)values(?,?,?,?,?,?,?,?)");
                  
                 pst.setString(1, firstname);
                 pst.setString(2, lastname);   
                 pst.setString(3, nic); 
                  
                 pst.setString(4, Gender);
-                pst.setString(5, course);   
-                pst.setString(6, batch); 
+                pst.setString(5, coursename);   
+                pst.setString(6, batchname); 
                  
                 pst.setString(7, telephone);
                 pst.setString(8, address);   

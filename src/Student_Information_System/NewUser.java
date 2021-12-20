@@ -182,13 +182,30 @@ PreparedStatement pst;
                  pst.setString(1, username);
                  pst.setString(2, confirmpass);
                  pst.setString(3, usertype);
-                 pst.executeUpdate();
+                 if(usertype=="Admin"){
+                    String pass = JOptionPane.showInputDialog("Password");
+                    if(pass=="123456"){
+                        pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "User Created...........");
+                    txtUser.setText("");
+                    txtPass.setText("");
+                    txtConfirm.setText("");
+                    txtUtype.setSelectedIndex(-1);
+                    txtUser.requestFocus();
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(this,"Contact System Manager ");
+                    }
+                 }
+                 else{
+                      pst.executeUpdate();
                  JOptionPane.showMessageDialog(null, "User Created...........");
                  txtUser.setText("");
                   txtPass.setText("");
                   txtConfirm.setText("");
                   txtUtype.setSelectedIndex(-1);
                   txtUser.requestFocus();
+                 }
                  
              } catch (ClassNotFoundException | SQLException ex) {
                  Logger.getLogger(NewUser.class.getName()).log(Level.SEVERE, null, ex);

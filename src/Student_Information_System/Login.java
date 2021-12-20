@@ -175,7 +175,6 @@ public class Login extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
 
-             
             if(txtUser.getText().isEmpty()||txtPass.getText().isEmpty()){
                 JOptionPane.showMessageDialog(this,"Username or Password is empty");
             }
@@ -192,9 +191,16 @@ public class Login extends javax.swing.JFrame {
                 rs= pst.executeQuery();
                 
                 if(rs.next()){
-                    Main m = new Main();
-                    this.hide();
-                    m.setVisible(true);
+                    if("Admin".equals(rs.getString(4))){
+                        MainA m = new MainA();
+                        this.hide();
+                        m.setVisible(true);
+                    }
+                    else{
+                        MainU m = new MainU();
+                        this.hide();
+                        m.setVisible(true);
+                    }
                 }
                 else{
                     JOptionPane.showMessageDialog(this,"Username or Password is Wrong");
