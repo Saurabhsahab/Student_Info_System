@@ -18,7 +18,7 @@ import java.sql.ResultSet;
  * @author syx
  */
 public class Login extends javax.swing.JFrame {
-    
+  
     Connection con;
     PreparedStatement pst;
     ResultSet rs;
@@ -167,7 +167,7 @@ public class Login extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(794, 545));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -189,6 +189,7 @@ public class Login extends javax.swing.JFrame {
                 pst.setString(1, username);
                 pst.setString(2, password);
                 rs= pst.executeQuery();
+                
                 
                 if(rs.next()){
                     if("Admin".equals(rs.getString(4))){
