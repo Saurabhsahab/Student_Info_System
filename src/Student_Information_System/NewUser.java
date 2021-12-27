@@ -184,8 +184,8 @@ PreparedStatement pst;
                  pst.setString(3, usertype);
                  if(usertype=="Admin"){
                     String pass = JOptionPane.showInputDialog("Password");
-                    if(pass=="123456"){
-                        pst.executeUpdate();
+                    if("123456".equals(pass)){
+                    pst.executeUpdate();
                     JOptionPane.showMessageDialog(null, "User Created...........");
                     txtUser.setText("");
                     txtPass.setText("");

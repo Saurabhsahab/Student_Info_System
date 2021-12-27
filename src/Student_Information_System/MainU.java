@@ -66,7 +66,7 @@ public class MainU extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addGap(130, 130, 130)
                 .addComponent(jButton2)
                 .addGap(46, 46, 46))
             .addGroup(jPanel1Layout.createSequentialGroup()

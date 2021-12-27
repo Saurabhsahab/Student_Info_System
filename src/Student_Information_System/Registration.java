@@ -23,7 +23,7 @@ public class Registration extends javax.swing.JFrame {
     /**
    
      */
-     Connection con;
+    Connection con;
     PreparedStatement pst;
     PreparedStatement pst1;
     PreparedStatement pst2;
@@ -61,7 +61,7 @@ public class Registration extends javax.swing.JFrame {
     {       
          try {
              Class.forName("com.mysql.cj.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/studentinformation","root","");
+              con = DriverManager.getConnection("jdbc:mysql://localhost/studentinformation","root","");
               pst2 = con.prepareStatement("select * from batch");
               rs = pst2.executeQuery();
               
