@@ -239,17 +239,25 @@ public class MainA extends javax.swing.JFrame {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/studentinformation","root","");
-            pst=con.prepareStatement(" select coursename from course ");
+            pst=con.prepareStatement(" select * from course ");
             rs= pst.executeQuery();
             
             String[] x=new String[100];
+            String[] y=new String[100];
+            String[] z=new String[100];
             
-            for(int i=0;i<100;i++)
+            for(int i=0;i<100;i++){
                 x[i]="";
+                y[i]="";
+                z[i]="";
+            }
+                
           
             int i=0;
             while(rs.next()){
-                x[i]=rs.getString(1);
+                x[i]=rs.getString(2);
+                y[i]=rs.getString(3);
+                z[i]=rs.getString(4);
                 i++;
             }
             
@@ -258,6 +266,10 @@ public class MainA extends javax.swing.JFrame {
             for(int j=0;j<100;j++){
                 if(x[j]!=""){
                     k+=x[j];
+                    k+="  :  ";
+                    k+=y[j];
+                    k+=" ";
+                    k+=z[j];
                     k+="\n";
                 }
             }
@@ -277,17 +289,23 @@ public class MainA extends javax.swing.JFrame {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/studentinformation","root","");
-            pst=con.prepareStatement(" select batchname from batch ");
+            pst=con.prepareStatement(" select * from batch ");
             rs= pst.executeQuery();
             
             String[] x=new String[100];
+            String[] y=new String[100];
+  
             
-            for(int i=0;i<100;i++)
+            for(int i=0;i<100;i++){
                 x[i]="";
+                y[i]="";
+            }
+                
           
             int i=0;
             while(rs.next()){
-                x[i]=rs.getString(1);
+                x[i]=rs.getString(2);
+                y[i]=rs.getString(3);
                 i++;
             }
             
@@ -296,6 +314,8 @@ public class MainA extends javax.swing.JFrame {
             for(int j=0;j<100;j++){
                 if(x[j]!=""){
                     k+=x[j];
+                    k+="  :  ";
+                    k+=y[j];
                     k+="\n";
                 }
             }
