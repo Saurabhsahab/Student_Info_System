@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author kobinath
+ * @author saurabh
  */
 public class Registration extends javax.swing.JFrame {
 

@@ -6,7 +6,7 @@ package Student_Information_System;
 
 /**
  *
- * @author syx
+ * @author saurabh
  */
 public class MainU extends javax.swing.JFrame {
 

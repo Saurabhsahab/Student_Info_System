@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author kobinath
+ * @author saurabh
  */
 public class Batch extends javax.swing.JFrame {
 

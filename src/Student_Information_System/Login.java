@@ -15,7 +15,7 @@ import java.sql.ResultSet;
 
 /**
  *
- * @author syx
+ * @author saurabh
  */
 public class Login extends javax.swing.JFrame {
   

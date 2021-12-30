@@ -16,7 +16,7 @@ import static javax.swing.UIManager.getString;
 
 /**
  *
- * @author syx
+ * @author saurabh
  */
 public class delete extends javax.swing.JFrame {
     

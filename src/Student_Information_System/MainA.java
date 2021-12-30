@@ -17,7 +17,7 @@ import java.awt.Color;
 
 /**
  *
- * @author kobinath
+ * @author saurabh
  */
 public class MainA extends javax.swing.JFrame {
     Connection con;
